@@ -9,7 +9,7 @@ const edi = require('electron-devtools-installer')
 let mainWindow
 
 function createWindow () {
-    console.log('process.env.ELECTRON_START_URL', process.env.ELECTRON_START_URL)
+
     const startUrl = process.env.ELECTRON_START_URL || url.format({
         pathname: path.join(__dirname, '../index.html'),
         protocol: 'file:',
