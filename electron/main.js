@@ -21,6 +21,8 @@ function createWindow () {
         }
     })
 
+    win.maximize()
+
     win.loadURL(startUrl)
     win.webContents.openDevTools()
 
