@@ -26,12 +26,12 @@ function createWindow () {
     win.loadURL(startUrl)
 
     if (isDev) {
-        const edi = require('electron-devtools-installer')
-
+        
         win.webContents.openDevTools({
             // mode: "detach",
         })
-
+        
+        // const edi = require('electron-devtools-installer')
         // edi.default(edi.REACT_DEVELOPER_TOOLS)
         //     .then((name) => console.log(`Added Extension:  ${name}`))
         //     .catch((err) => console.log('An error occurred: ', err));
