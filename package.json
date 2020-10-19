@@ -2,6 +2,7 @@
   "name": "electron-boiler",
   "version": "0.1.0",
   "private": true,
+  "main": "electron/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,7 +12,8 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env-shell BROWSER=none && react-scripts start",
+    "start-electron": "cross-env-shell ELECTRON_START_URL=http://localhost:3000 && electron .",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -32,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "electron": "^10.1.3"
   }
 }
