@@ -4,6 +4,11 @@ const url = require('url')
 const isDev = require('electron-is-dev')
 const { app, BrowserWindow } = require('electron')
 
+// Handle creating/removing shortcuts on Windows when installing/uninstalling
+if (require('electron-squirrel-startup')) {
+    app.quit()
+} 
+
 function createWindow () {
 
     const startUrl = process.env.ELECTRON_START_URL || url.format({
