@@ -13,8 +13,8 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
+    "el-start": "cross-env-shell ELECTRON_START_URL=http://localhost:3000 && electron .",
     "rs-start": "cross-env-shell BROWSER=none && react-scripts start",
-    "start-electron": "cross-env-shell ELECTRON_START_URL=http://localhost:3000 && electron .",
     "rs-build": "react-scripts build",
     "rs-test": "react-scripts test",
     "rs-eject": "react-scripts eject",
