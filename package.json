@@ -4,6 +4,8 @@
   "private": true,
   "main": "electron/main.js",
   "homepage": "./",
+  "author": "author name",
+  "description": "description content",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -53,7 +55,9 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "asar": true
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
