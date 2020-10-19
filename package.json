@@ -15,15 +15,14 @@
   },
   "scripts": {
     "dev": "concurrently -k \"cross-env-shell BROWSER=none npm run rs-start\" \"npm run electron\"",
-    "electron": "wait-on tcp:3000 && cross-env-shell ELECTRON_START_URL=http://localhost:3000 npm run start",
+    "electron": "wait-on tcp:3000 && cross-env-shell ELECTRON_START_URL=http://localhost:3000 electron-forge start",
 
-    "rs-start": "react-scripts start",
-    "rs-build": "react-scripts build",
-    "rs-test": "react-scripts test",
-    "rs-eject": "react-scripts eject",
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "package": "react-scripts build && electron-forge package",
+    "make": "react-scripts build && electron-forge make"
   },
   "eslintConfig": {
     "extends": "react-app"
