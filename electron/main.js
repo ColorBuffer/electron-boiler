@@ -6,8 +6,6 @@ const { app, BrowserWindow } = require('electron')
 
 const edi = require('electron-devtools-installer')
 
-let mainWindow
-
 function createWindow () {
 
     const startUrl = process.env.ELECTRON_START_URL || url.format({
@@ -39,8 +37,6 @@ function createWindow () {
         //     .catch((err) => console.log('An error occurred: ', err));
     }
 
-    mainWindow = win
-    mainWindow.on('closed', () => mainWindow = null)
 }
 
 app.whenReady().then(createWindow)
