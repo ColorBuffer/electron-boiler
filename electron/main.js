@@ -4,8 +4,6 @@ const url = require('url')
 const isDev = require('electron-is-dev')
 const { app, BrowserWindow } = require('electron')
 
-const edi = require('electron-devtools-installer')
-
 function createWindow () {
 
     const startUrl = process.env.ELECTRON_START_URL || url.format({
@@ -28,6 +26,8 @@ function createWindow () {
     win.loadURL(startUrl)
 
     if (isDev) {
+        const edi = require('electron-devtools-installer')
+
         win.webContents.openDevTools({
             // mode: "detach",
         })
